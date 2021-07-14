@@ -126,10 +126,12 @@ fi
 PUBLISH_SCALA_2_12=0
 SCALA_2_12_PROFILES="-Pscala-2.12"
 if [[ $SPARK_VERSION < "3.0." ]]; then
-  SCALA_2_12_PROFILES="-Pscala-2.12 -Pflume"
+  #SCALA_2_12_PROFILES="-Pscala-2.12 -Pflume"
+  SCALA_2_12_PROFILES="-Pscala-2.11 -Pflume"
 fi
 if [[ $SPARK_VERSION > "2.4" ]]; then
-  PUBLISH_SCALA_2_12=1
+  #not needed
+  PUBLISH_SCALA_2_12=0
 fi
 
 # Hive-specific profiles for some builds
